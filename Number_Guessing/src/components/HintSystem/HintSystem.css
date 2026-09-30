@@ -1,0 +1,78 @@
+.hints-card {
+  width: 100%;
+}
+
+.hints-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.hints-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hints-title {
+  font-size: 1.1rem;
+}
+
+.hints-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
+}
+
+.hint-item {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--surface-glass-border);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: all var(--transition-fast);
+}
+
+.hint-unlocked {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.hint-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hint-type-icon {
+  font-size: 1.1rem;
+}
+
+.hint-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.hint-revealed-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #fef08a;
+  line-height: 1.4;
+}
+
+.text-emerald {
+  color: #10b981;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.unlock-btn {
+  width: 100%;
+  font-size: 0.8rem;
+}

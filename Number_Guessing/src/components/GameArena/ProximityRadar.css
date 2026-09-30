@@ -1,0 +1,134 @@
+.proximity-radar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1rem;
+  position: relative;
+}
+
+.radar-meter {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radar-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.radar-track {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 12;
+}
+
+.radar-progress {
+  fill: none;
+  stroke: url(#meterGrad);
+  stroke-width: 12;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.5));
+}
+
+.radar-center-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.radar-emoji {
+  font-size: 1.5rem;
+  margin-bottom: -0.2rem;
+}
+
+.radar-percent {
+  font-size: 2.1rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--text-main);
+}
+
+.radar-closeness-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--text-subtle);
+  font-weight: 700;
+}
+
+.radar-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.radar-status-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--surface-glass-border);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.radar-status-icon {
+  color: var(--accent-tertiary);
+}
+
+.attempts-countdown {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.time-attack-badge, .attempts-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+/* Temperature Dynamic Glows */
+.temp-boiling .radar-progress {
+  stroke: var(--temp-boiling);
+  filter: drop-shadow(0 0 12px var(--temp-boiling));
+}
+
+.temp-hot .radar-progress {
+  stroke: var(--temp-hot);
+  filter: drop-shadow(0 0 10px var(--temp-hot));
+}
+
+.temp-warm .radar-progress {
+  stroke: var(--temp-warm);
+  filter: drop-shadow(0 0 8px var(--temp-warm));
+}
+
+.temp-cold .radar-progress {
+  stroke: var(--temp-cold);
+  filter: drop-shadow(0 0 8px var(--temp-cold));
+}
+
+.temp-freezing .radar-progress {
+  stroke: var(--temp-freezing);
+  filter: drop-shadow(0 0 8px var(--temp-freezing));
+}
+
+.temp-correct .radar-progress {
+  stroke: var(--temp-correct);
+  filter: drop-shadow(0 0 15px var(--temp-correct));
+}

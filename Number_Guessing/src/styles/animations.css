@@ -1,0 +1,129 @@
+/* Keyframe Animations */
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(99, 102, 241, 0.7);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes firePulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+    filter: drop-shadow(0 0 6px rgba(249, 115, 22, 0.6));
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(239, 68, 68, 0.85);
+    filter: drop-shadow(0 0 16px rgba(249, 115, 22, 0.9));
+  }
+}
+
+@keyframes freezingShimmer {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.75);
+  }
+}
+
+@keyframes radarSweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shakeFeedback {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px) rotate(-1deg); }
+  40% { transform: translateX(8px) rotate(1deg); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+}
+
+@keyframes victoryPop {
+  0% {
+    transform: scale(0.7) rotate(-4deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.06) rotate(2deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes floatElement {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Helper Animation Classes */
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+.animate-fire {
+  animation: firePulse 1.5s infinite ease-in-out;
+}
+
+.animate-freeze {
+  animation: freezingShimmer 2s infinite ease-in-out;
+}
+
+.animate-shake {
+  animation: shakeFeedback 0.45s ease-in-out;
+}
+
+.animate-victory {
+  animation: victoryPop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.animate-float {
+  animation: floatElement 3s infinite ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUpFade 0.35s ease-out forwards;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 6s infinite ease;
+}

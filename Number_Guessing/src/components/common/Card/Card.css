@@ -1,0 +1,36 @@
+.custom-card {
+  position: relative;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.pad-none { padding: 0; }
+.pad-sm { padding: 1rem; }
+.pad-md { padding: 1.5rem; }
+.pad-lg { padding: 2rem; }
+
+.hover-elevate:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-lg);
+}
+
+.glow-primary {
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: var(--glow-primary);
+}
+
+.glow-fire {
+  border-color: rgba(239, 68, 68, 0.4);
+  box-shadow: var(--glow-fire);
+}
+
+.glow-cyan {
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: var(--glow-cyan);
+}
+
+.glow-success {
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow: var(--glow-success);
+}

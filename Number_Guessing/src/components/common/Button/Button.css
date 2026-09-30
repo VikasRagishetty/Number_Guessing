@@ -1,0 +1,109 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Sizes */
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-md {
+  padding: 0.65rem 1.25rem;
+  font-size: 0.95rem;
+}
+
+.btn-lg {
+  padding: 0.85rem 1.8rem;
+  font-size: 1.1rem;
+  border-radius: var(--radius-lg);
+}
+
+.btn-icon {
+  padding: 0.6rem;
+  border-radius: var(--radius-md);
+}
+
+/* Variants */
+.btn-primary {
+  background: var(--grad-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+}
+.btn-primary:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.55);
+}
+.btn-primary:not(:disabled):active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: var(--surface-card);
+  color: var(--text-main);
+  border-color: var(--surface-glass-border);
+}
+.btn-secondary:not(:disabled):hover {
+  background: var(--surface-glass-hover);
+  border-color: var(--accent-primary);
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  background: var(--grad-cyan-indigo);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+}
+.btn-accent:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.5);
+}
+
+.btn-danger {
+  background: var(--grad-fire);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+.btn-danger:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5);
+}
+
+.btn-glass {
+  background: var(--surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-main);
+  border-color: var(--surface-glass-border);
+}
+.btn-glass:not(:disabled):hover {
+  background: var(--surface-glass-hover);
+  border-color: var(--accent-secondary);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+}
+.btn-ghost:not(:disabled):hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.06);
+}
